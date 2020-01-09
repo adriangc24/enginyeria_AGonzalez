@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.org/dtd/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+
+	<table-filter match-catalog="vuelos" match-name="pasaje" />
+	<table-filter match-catalog="vuelos" match-name="pasajero" />
+	<table-filter match-catalog="vuelos" match-name="personal" />
+	<table-filter match-catalog="vuelos" match-name="tripulacion" />
+	<table-filter match-catalog="vuelos" match-name="vuelo" />
+	<table catalog="vuelos" name="pasaje">
+		<column name="PASAJERO_COD"></column>
+		<column name="IDENTIFICADOR"></column>
+		<column name="PASAJERO_COD"></column>
+		<column name="IDENTIFICADOR"></column>
+		<column name="CLASE"></column>
+		<column name="NUMASIENTO"></column>
+		<column name="PVP"></column>
+	</table>
+	<table catalog="vuelos" name="pasajero">
+		<column name="COD"></column>
+		<column name="DIRECCION"></column>
+		<column name="PAIS"></column>
+		<column name="TLF"></column>
+		<column name="NOMBRE"></column>
+	</table>
+	<table catalog="vuelos" name="personal">
+		<column name="CODIGO"></column>
+		<column name="NOMBRE"></column>
+		<column name="CATEGORIA"></column>
+	</table>
+	<table catalog="vuelos" name="tripulacion">
+		<column name="VUELO_IDENTIFICADOR"></column>
+		<column name="PERSONAL_CODIGO"></column>
+		<column name="VUELO_IDENTIFICADOR"></column>
+		<column name="PERSONAL_CODIGO"></column>
+		<column name="PUESTO"></column>
+	</table>
+	<table catalog="vuelos" name="vuelo">
+		<column name="IDENTIFICADOR"></column>
+		<column name="AEROPUERTO_DESTINO"></column>
+		<column name="FECHA_VUELO"></column>
+		<column name="TIPO_VUELO"></column>
+		<column name="AEROPUERTO_ORIGEN"></column>
+	</table>
+</hibernate-reverse-engineering>
