@@ -20,7 +20,7 @@ public class Personal implements java.io.Serializable {
 	private short codigo;
 	private String nombre;
 	private String categoria;
-	private Set tripulacions = new HashSet(0);
+	private Set<Tripulacion> tripulacions = new HashSet(0);
 
 	public Personal() {
 	}
@@ -66,11 +66,11 @@ public class Personal implements java.io.Serializable {
 	}
 
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "personal")
-	public Set getTripulacions() {
+	public Set<Tripulacion> getTripulacions() {
 		return this.tripulacions;
 	}
 
-	public void setTripulacions(Set tripulacions) {
+	public void setTripulacions(Set<Tripulacion> tripulacions) {
 		this.tripulacions = tripulacions;
 	}
 

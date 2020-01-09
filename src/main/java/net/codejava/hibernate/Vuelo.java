@@ -25,8 +25,8 @@ public class Vuelo implements java.io.Serializable {
 	private String aeropuertoDestino;
 	private String tipoVuelo;
 	private Date fechaVuelo;
-	private Set pasajes = new HashSet(0);
-	private Set tripulacions = new HashSet(0);
+	private Set<Pasaje> pasajes = new HashSet(0);
+	private Set<Tripulacion> tripulacions = new HashSet(0);
 
 	public Vuelo() {
 	}
@@ -95,20 +95,20 @@ public class Vuelo implements java.io.Serializable {
 	}
 
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "vuelo")
-	public Set getPasajes() {
+	public Set<Pasaje> getPasajes() {
 		return this.pasajes;
 	}
 
-	public void setPasajes(Set pasajes) {
+	public void setPasajes(Set<Pasaje> pasajes) {
 		this.pasajes = pasajes;
 	}
 
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "vuelo")
-	public Set getTripulacions() {
+	public Set<Tripulacion> getTripulacions() {
 		return this.tripulacions;
 	}
 
-	public void setTripulacions(Set tripulacions) {
+	public void setTripulacions(Set<Tripulacion> tripulacions) {
 		this.tripulacions = tripulacions;
 	}
 

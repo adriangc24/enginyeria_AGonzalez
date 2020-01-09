@@ -22,7 +22,7 @@ public class Pasajero implements java.io.Serializable {
 	private String tlf;
 	private String direccion;
 	private String pais;
-	private Set pasajes = new HashSet(0);
+	private Set<Pasaje> pasajes = new HashSet(0);
 
 	public Pasajero() {
 	}
@@ -88,11 +88,11 @@ public class Pasajero implements java.io.Serializable {
 	}
 
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "pasajero")
-	public Set getPasajes() {
+	public Set<Pasaje> getPasajes() {
 		return this.pasajes;
 	}
 
-	public void setPasajes(Set pasajes) {
+	public void setPasajes(Set<Pasaje> pasajes) {
 		this.pasajes = pasajes;
 	}
 
